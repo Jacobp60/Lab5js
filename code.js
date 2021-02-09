@@ -18,7 +18,14 @@ function message(event) {
 
     let rank = $("input[name=rank]:checked").val();
 
-    $("p#message").text(`Hello ${rank} ${firstName} ${lastName}. Welcome back!`)
+    let colors = $("input[name=rank]:checked").data("color");
+
+    $("p#message").text(`Hello ${rank} ${firstName} ${lastName}. Welcome back!`);
+
+    $("p#message").css("color", colors);
+
+
+
 
 
 
